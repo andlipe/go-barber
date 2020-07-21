@@ -9,10 +9,6 @@
     "prettier/@typescript-eslint",
     "plugin:prettier/recommended"
   ],
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
-  },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2018,
@@ -20,9 +16,23 @@
   },
   "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
-    "class-methods-use-this": "off",
+    "no-underscore-dangle": "error",
+    "no-useless-constructor": "off",
     "prettier/prettier": "error",
+    "class-methods-use-this": "off",
     "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "_"
+      }
+    ],
+    "@typescript-eslint/interface-name-prefix": [
+      "error",
+      {
+        "prefixWithI": "always"
+      }
+    ],
     "import/extensions": [
       "error",
       "ignorePackages",
