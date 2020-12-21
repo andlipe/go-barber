@@ -21,6 +21,7 @@
     "prettier/prettier": "error",
     "class-methods-use-this": "off",
     "@typescript-eslint/camelcase": "off",
+    "import/no-unresolved": [2, { "caseSensitive": false }],
     "@typescript-eslint/no-unused-vars": [
       "error",
       {
@@ -43,7 +44,9 @@
   },
   "settings": {
     "import/resolver": {
-      "typescript": {}
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
     }
   }
 }
